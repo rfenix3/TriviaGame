@@ -48,7 +48,7 @@ $(document).ready(function() {
   }
 
   function startCount() {
-    c = 10;
+    c = 20;
     if (!timer_is_on) {
         timer_is_on = 1;
         timedCount();
@@ -89,7 +89,7 @@ $(document).ready(function() {
     $('#start').hide();
     $('#timer').show();
     $('#notice').show();
-    $('#notice').text('Message');
+    $('#notice').text('Message / Instruction');
   });
   
   // Animates buttons on hover
@@ -154,7 +154,7 @@ $(document).ready(function() {
         startCount();
 
         $('#next').show();
-        $('#notice').text('Message');        
+        $('#notice').text('Message / Instruction');        
 
         if (!(isNaN(selections[questionCounter]))) {
           $('input[value='+selections[questionCounter]+']').prop('checked', true);
@@ -201,8 +201,8 @@ $(document).ready(function() {
       if (selections[questionCounter] === j) {
         alert('Congratulations! Your answer is correct!');
       } else {
-        console.log('The correct answer is:' + questions[questionCounter].choices[j]);
-        alert('The correct answer is:' + questions[questionCounter].choices[j]);
+        console.log('The correct answer is ' + questions[questionCounter].choices[j]);
+        alert('The correct answer is ' + questions[questionCounter].choices[j]);
       }
 
       questionCounter++;
